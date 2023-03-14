@@ -37,24 +37,29 @@ class CuentaCorriente
     depositoEnCuenta(valor){
         if(valor > 0){
             this.#saldo += valor; //this te define la cuenta corriente actual, puede ser [1,2,3.....]
+            return this.#saldo;
         }
     }
     retiroEnCuenta(valor){
         if(valor<=this.#saldo){
             this.#saldo -= valor;
+            return this.#saldo;
         }
-
+    }
+    //creando un funcion para retornar el saldo
+    verSaldo(){
+        return this.#saldo;
     }
 }
 
 //Nueva Instancia
 cuentaDeLeonardo = new CuentaCorriente();
-cuentaDeLeonardo.depositoEnCuenta(100);
-cuentaDeLeonardo.numero='21312412';
-cuentaDeLeonardo.agencia=1001;
-console.log(cuentaDeLeonardo);
-cuentaDeLeonardo.retiroEnCuenta(50);
-console.log(cuentaDeLeonardo);
+let saldo = cuentaDeLeonardo.verSaldo();
+console.log('el saldo actual es ' + saldo)
+saldo = cuentaDeLeonardo.depositoEnCuenta(100);
+console.log('el saldo actual es ' + saldo)
+ saldo =cuentaDeLeonardo.retiroEnCuenta(50);
+console.log('el saldo actual es ' + saldo)
 
 
 /*
