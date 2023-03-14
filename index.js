@@ -1,73 +1,13 @@
-//cliente
-
-/*forma tradicional
-const nombreCliente='Leonardo';
-const dniCliente='13804050';
-const numeroCuenta='1234567890';
-const saldoCuenta =1000; */
-
-
-//creando clase cliente
-
-
-class Cliente
-{
-    nombreCliente;
-    dniCliente;
-    rucCliente;
-}
-//Creando una nueva clase para cuenta
-class CuentaCorriente
-{
-    numero;
-    #saldo;
-    agencia;
-
-    //creando un constructor
-    constructor(){
-        this.#saldo=0;
-        this.numero='';
-        this.agencia='';
-
-    }
-
-    
-    //creando un metodo
-    //deposito
-    depositoEnCuenta(valor){
-        if(valor > 0){
-            this.#saldo += valor; //this te define la cuenta corriente actual, puede ser [1,2,3.....]
-            return this.#saldo;
-        }
-    }
-    retiroEnCuenta(valor){
-        if(valor<=this.#saldo){
-            this.#saldo -= valor;
-            return this.#saldo;
-        }
-    }
-    //creando un funcion para retornar el saldo
-    verSaldo(){
-        return this.#saldo;
-    }
-}
+//importando una clase
+import {CuentaCorriente}from './cuentaCorriente.js';
+//import {cliente} from './cliente.js';
 
 //Nueva Instancia
-cuentaDeLeonardo = new CuentaCorriente();
+const cuentaDeLeonardo = new CuentaCorriente();
 let saldo = cuentaDeLeonardo.verSaldo();
 console.log('el saldo actual es ' + saldo)
 saldo = cuentaDeLeonardo.depositoEnCuenta(100);
 console.log('el saldo actual es ' + saldo)
  saldo =cuentaDeLeonardo.retiroEnCuenta(50);
 console.log('el saldo actual es ' + saldo)
-
-
-/*
-//creando una constante que tome el valor del nuevo arreglo
-
-const cliente1= new Cliente();
-cliente1.nombreCliente='José';
-cliente1.dniCliente='123412';
-cliente1.rucCliente='10123142142';*/
-
 
