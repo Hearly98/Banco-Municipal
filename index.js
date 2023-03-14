@@ -67,7 +67,7 @@ cuentaCorriente3.numero='342325231';
 cuentaCorriente3.saldo=1000;
 cuentaCorriente3.agencia=1001;
 //agregando operacion de entrada de dinero o deposito
-cuentaCorriente3.depositoEnCuenta(90);
+cuentaCorriente3.depositoEnCuenta(100);
 
 
 
