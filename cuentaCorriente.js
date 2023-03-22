@@ -1,17 +1,34 @@
-
+import { Cliente } from "./cliente.js";
 //Creando una nueva clase para cuenta
 export class CuentaCorriente
 {
+    #cliente;
     numero;
-    #saldo;
+    #saldo; //primitivo
     agencia;
 
-    //creando un constructor
-    constructor(){
-        this.#saldo=0;
-        this.numero='';
-        this.agencia='';
+    //set o asignador
 
+    set cliente(valor){
+        if(valor instanceof Cliente)
+        this.#cliente= valor;
+    }
+
+    //get u obtener
+
+    get cliente(){
+       return this.#cliente;
+    }
+
+    //creando un constructor
+    constructor(cliente, numero,agencia){
+        this.cliente=cliente;
+        this.#saldo=0;
+        this.numero=numero;
+        this.agencia=agencia;
+
+        //el constructor se ejecuta cada vez que se genera una instancia
+        
     }
 
     

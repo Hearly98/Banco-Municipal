@@ -3,22 +3,17 @@ import {Cliente} from './cliente.js';
 import {CuentaCorriente}from './cuentaCorriente.js';
 
 
-const cliente =new Cliente();
-cliente.nombreCliente='Leonardo';
-cliente.dniCliente='1242412';
-cliente.rucCliente='123445';
-//Nueva Instancia
-const cuentaDeLeonardo = new CuentaCorriente();
-cuentaDeLeonardo.numero='1';
-cuentaDeLeonardo.agencia='001';
-cuentaDeLeonardo.cliente= cliente;
+const cliente =new Cliente('Leonardo','1242412','123445');
+const cliente2 =new Cliente('Maria', '1242512', '321414');
 
-console.log(cuentaDeLeonardo);
-console.log(CuentaCorriente);
+const cuentaDeLeonardo = new CuentaCorriente(cliente,'1', '001');
+const cuentaDeMaria = new CuentaCorriente(cliente2, '2', '002');
+//Nueva Instancia
+
 let saldo = cuentaDeLeonardo.verSaldo();
-console.log('el saldo actual es ' + saldo)
-saldo = cuentaDeLeonardo.depositoEnCuenta(100);
-console.log('el saldo actual es ' + saldo)
- saldo =cuentaDeLeonardo.retiroEnCuenta(50);
-console.log('el saldo actual es ' + saldo)
+saldo=cuentaDeLeonardo.depositoEnCuenta(150);
+console.log('El saldo actual(cuentaLeonardo) '+saldo);   
+
+    console.log(cuentaDeLeonardo.cliente);
+    console.log(cuentaDeMaria.cliente);
 
