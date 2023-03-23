@@ -13,6 +13,7 @@ const cuentaAhorroLeonardo= new CuentaAhorro(cliente, '9985', '001', 0);
 console.log(cuentaDeLeonardo);
 
 //operaciones sobre las cuentas
+
 console.log(cuentaDeLeonardo);
 cuentaDeLeonardo.depositoEnCuenta(150);
 console.log(cuentaDeLeonardo.verSaldo());
@@ -21,5 +22,5 @@ console.log(cuentaDeLeonardo.verSaldo());
 console.log(cuentaAhorroLeonardo);
 cuentaAhorroLeonardo.depositoEnCuenta(200);
 console.log(cuentaAhorroLeonardo.verSaldo());
-cuentaAhorroLeonardo.retiroEnCuenta(70);
+cuentaAhorroLeonardo.retiroEnCuenta(120);
 console.log(cuentaAhorroLeonardo.verSaldo());

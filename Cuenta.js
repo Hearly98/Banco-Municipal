@@ -28,15 +28,17 @@ export class Cuenta{
         }
     }
     retiroEnCuenta(valor){
-       /* if(this.tipo== 'Corriente'){
-            valor = valor * 1.05;
-        }else if(this.tipo=='Ahorro'){
-            valor = valor * 1.02;
-        }*/
-        if(valor<=this.#saldo){
-            this.#saldo -= valor;
-            return this.#saldo;
-        }
+        //protegiedo la sobreescritura
+        _retiroEnCuenta(valor, 0);
+       
+    }
+
+        _retiroEnCuenta(valor, comision){
+            valor=valor * (1 + comision/100);
+            if(valor<=this.#saldo){
+                this.#saldo -= valor;
+                return this.#saldo;
+            }
     }
     verSaldo(){
         return this.#saldo;
@@ -45,4 +47,5 @@ export class Cuenta{
         this.retiroEnCuenta(valor);
         cuentaDestino.depositoEnCuenta(valor);
     }
+
 }

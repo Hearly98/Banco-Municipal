@@ -14,4 +14,8 @@ export class CuentaCorriente extends Cuenta
         CuentaCorriente.cantidadCuentas++;
         //el constructor se ejecuta cada vez que se genera una instancia   
     }
+    retiroEnCuenta(valor){
+             //llamando al padre para que se ejecute la operacion
+        super._retiroEnCuenta(valor, 5);
+}
 }
