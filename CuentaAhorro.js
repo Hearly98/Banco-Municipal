@@ -1,31 +1,8 @@
-export class CuentaAhorro{
-    //definicion de atributos privados
-    #cliente;
-    #saldo;
+import {Cuenta} from "./Cuenta.js";
 
-    constructor(cliente, numero, agencia, saldo){
-        this.#cliente=cliente;
-        this.numero=numero;
-        this.agencia=agencia;
-        this.#saldo=saldo;
-    }
-     depositoEnCuenta(valor){
-        if(valor > 0){
-            this.#saldo += valor; 
-            return this.#saldo;
+export class CuentaAhorro extends Cuenta{
+    constructor(cliente, numero,agencia,saldo){
+        //en el caso de cuenta de ahorro si se puede definir el saldo inicial
+        super(cliente,numero,agencia,saldo);
         }
-    }
-    retiroEnCuenta(valor){
-        if(valor<=this.#saldo){
-            this.#saldo -= valor;
-            return this.#saldo;
-        }
-    }
-    verSaldo(){
-        return this.#saldo;
-    }
-    tranferirParaCuenta(valor, cuentaDestino){
-        this.retiroEnCuenta(valor);
-        cuentaDestino.depositoEnCuenta(valor);
-    }
 }
