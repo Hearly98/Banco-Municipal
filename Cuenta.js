@@ -31,12 +31,10 @@ export class Cuenta{
             return this.#saldo;
         }
     }
-    retiroEnCuenta(valor){
-        //protegiedo la sobreescritura
-        _retiroEnCuenta(valor, 0);
-       
+        retiroEnCuenta(valor){
+            throw new Error('Debe implementar el metodo el metodo retirar en cuenta en su clase');
     }
-
+    
         _retiroEnCuenta(valor, comision){
             valor=valor * (1 + comision/100);
             if(valor<=this.#saldo){

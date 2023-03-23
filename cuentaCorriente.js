@@ -1,4 +1,4 @@
-import { Cliente } from "./cliente.js";
+
 import {Cuenta} from "./Cuenta.js";
 //Creando una nueva clase para cuenta
 
