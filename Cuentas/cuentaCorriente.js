@@ -1,10 +1,10 @@
 
-import {Cuenta} from "./Cuenta.js";
 //Creando una nueva clase para cuenta
 
+import { Cuenta } from "./Cuenta.js";
 
-export class CuentaCorriente extends Cuenta
-{
+
+export class CuentaCorriente extends Cuenta{
 
     static cantidadCuentas=0;
     //creando un constructor
