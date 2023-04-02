@@ -4,9 +4,9 @@ import { Empleado } from './Empleados/Empleado.js';
 import { Gerente } from './Empleados/Gerente.js';
 import { Director } from './Empleados/Director.js';
 import { SistemaAutenticacion } from './SistemaAutenticacion.js';
-const cliente =new Cliente('Leonardo','1242412','123445');
-cliente.asignarClave('1111');
-console.log(SistemaAutenticacion.login(cliente,'1111'));
+//const cliente =new Cliente('Leonardo','1242412','123445');
+//cliente.asignarClave('1111');
+//console.log(SistemaAutenticacion.login(cliente,'1111'));
 //const cliente2 =new Cliente('Maria', '1242512', '321414');
 
 const empleado =new Empleado('Juan Perez', '831297213', 2000);

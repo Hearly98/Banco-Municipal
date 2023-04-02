@@ -27,8 +27,8 @@ export class Cliente
     asignarClave(clave){
         this.#clave=clave;
      }
-
-     get clave(){
-        return this.#clave;
+//encapsulando en un metodo para que sea mas seguro
+   autenticable(clave){
+        return clave ==this.#clave;
      }
 }
